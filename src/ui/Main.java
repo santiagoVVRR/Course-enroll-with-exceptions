@@ -60,8 +60,13 @@ public class Main {
 				case 3:
 					System.out.print("Please enter the student id to grade: ");
 					id = sc.nextLine();
-					System.out.print("Please enter the student grade: ");
-					double g = Double.parseDouble(sc.nextLine());
+					try {
+						System.out.print("Please enter the student grade: ");
+						double g = Double.parseDouble(sc.nextLine());
+					}catch(NumberFormatException e){
+						System.out.println("Please, tape a number");
+						System.out.println(e.getMessage());
+					}
 					System.out.print("Please enter the grade number in the semester: ");
 					int gradeNumber = Integer.parseInt(sc.nextLine());
 					
